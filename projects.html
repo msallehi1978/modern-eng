@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>نمونه کارهای ما - شرکت مهندسی مدبران</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#747878",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#808488",
+                    "surface-tint": "#5f5e5e",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-secondary-container": "#785a1a",
+                    "tertiary-fixed": "#e0e3e7",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container": "#eeeeee",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary": "#000000",
+                    "tertiary-container": "#181c20",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-fixed": "#ffdea5",
+                    "on-tertiary-fixed": "#181c20",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "on-surface": "#1a1c1c",
+                    "secondary": "#775a19",
+                    "surface-variant": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#858383",
+                    "surface-dim": "#dadada",
+                    "on-primary-fixed-variant": "#474746",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-error-container": "#93000a",
+                    "background": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#fed488",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444748",
+                    "surface-bright": "#f9f9f9",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-fixed-variant": "#43474b",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-background": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c3c7cb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Vazirmatn", "sans-serif"],
+                    "display-lg": ["Vazirmatn", "serif"],
+                    "headline-md": ["Vazirmatn", "serif"],
+                    "headline-lg-mobile": ["Vazirmatn", "serif"],
+                    "label-sm": ["Vazirmatn", "sans-serif"],
+                    "label-lg": ["Vazirmatn", "sans-serif"],
+                    "display-md": ["Vazirmatn", "serif"],
+                    "headline-lg": ["Vazirmatn", "serif"],
+                    "body-lg": ["Vazirmatn", "sans-serif"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                    "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                    "display-md": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+            }
+    }
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Vazirmatn', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .year-indicator { writing-mode: vertical-rl; text-orientation: mixed; }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pt-20">
+
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md border-b border-outline-variant fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto left-0 right-0">
+    <a class="font-headline-md text-headline-md tracking-tighter text-primary" href="index.html">شرکت مهندسی مدبران</a>
+    <div class="hidden md:flex gap-8 items-center">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="index.html">خانه</a>
+        <a class="font-label-lg text-label-lg text-primary border-b-2 border-secondary font-bold opacity-80" href="projects.html">نمونه کارها</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="about.html">درباره ما</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="contact.html">تماس</a>
+    </div>
+    <a href="contact.html" class="hidden md:block font-label-lg text-label-lg bg-primary text-on-primary px-6 py-3 hover:bg-secondary transition-colors duration-300">مشاوره</a>
+    <button id="menu-btn" class="md:hidden text-primary">
+        <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-20 left-0 right-0 z-40 flex-col bg-surface border-b border-outline-variant px-margin-mobile py-6 gap-6 max-w-container-max mx-auto">
+    <a class="font-label-lg text-label-lg text-on-surface-variant" href="index.html">خانه</a>
+    <a class="font-label-lg text-label-lg text-primary font-bold" href="projects.html">نمونه کارها</a>
+    <a class="font-label-lg text-label-lg text-on-surface-variant" href="about.html">درباره ما</a>
+    <a class="font-label-lg text-label-lg text-on-surface-variant" href="contact.html">تماس</a>
+    <a class="inline-flex items-center bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 w-max" href="contact.html">درخواست مشاوره</a>
+</div>
+
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+
+    <!-- Header Section -->
+    <header class="mb-20 text-right max-w-3xl">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-secondary mb-4">پورتفولیو</p>
+        <h1 class="font-display-lg text-display-lg text-primary mb-6">گاه‌شمار پروژه‌ها</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">مروری بر سیر تکامل معماری مدبران از سال ۱۳۹۰ تا به امروز. مجموعه‌ای از سازه‌های برگزیده که هر یک برگی از افتخارات مهندسی کشور هستند.</p>
+    </header>
+
+    <hr class="border-t border-outline-variant w-full mb-20"/>
+
+    <!-- Portfolio Timeline Grid -->
+    <div class="space-y-32">
+
+        <!-- Year 1390 - 1391 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-1 hidden md:flex flex-col items-center">
+                <span class="year-indicator font-display-md text-primary opacity-20 text-4xl">۱۳۹۰ - ۱۳۹۱</span>
+            </div>
+            <article class="md:col-span-6 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="ویلا مدرن خزر" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgViC9udN0s504nmZh87kLLD1IOaaBEIktdQ560zWvrGfsf33gzueCSfGoblwFV0DCcB9eKaCShDf9WBtZ6wEy0vEEiddCXrd_OOuMRg1rze4b4wZSqKyGl19DpKMlIP1pIHJ_KDE69QvgQrAHpHPWPazF-zaI7IoXcu8tkW4BtRrdYdzNKdZg8taOGQvGrjlk_rsuiaxyzSMgQ1wBV7LlioHBBnYQvB6neX08vlb3qGVPZ1jrDxUoJ7f_CGSrSlTJCe8nPs9at31g"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۰</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">ویلا مدرن خزر</h2>
+                <p class="font-body-md text-on-surface-variant">مازندران</p>
+            </article>
+            <article class="md:col-span-5 group cursor-pointer md:mt-24">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="مجتمع اداری ولیعصر" class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi7zUsafwhSl8TXMNxL7-aQGH_cHP9NwgEXP0FsQw8qgP6PZK7RgeC0aHudv4WgJLPopADbAjfl87p937LLZMQ2ZYaikHzMTct-9x9-AR3ClxZP1GIpOglMX26ApiZwEvC_MkoBO6Mvjg5luW9DAnNwekEWij2Ev_VDV4zjHJ9y-H_SgfJla_No-pzXn1ODDgJyu43QgHdi8x972PUW8DXwNckeJGXQ4wC1ehR9wWaeW-b_2wlZSQdti3bZ9kIEhi9Q_bdC25qF5OR"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۱</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">مجتمع اداری ولیعصر</h2>
+                <p class="font-body-md text-on-surface-variant">تهران، خیابان ولیعصر</p>
+            </article>
+        </div>
+
+        <!-- Year 1392 - 1393 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+            <article class="md:col-span-5 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="آپارتمان زعفرانیه" class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdoA5cA8ZoKNA_h43H0UMvpj8BbJnqj3ZM4Kw3e_tLFCZufSPlewpzHNwEbrUn0QE-OwyAAg7egmfvnbU4Cl2a6jkaDS1TTNYOxnRPLjJmD7IR_fFrLxtjA_POCuLQc2J5Z0-tr1Bw6t6roexxupdi9C3wTP5NlbrytY-x1St-ReAW1doJgrsKOa8F0P3NbAqQ2heUtuQQgBotjy8bzoXomMu8GNiXHkniEZQ9Xi56RQo4kuKR-J21oNbqAnAiQ727xjbHvgxfeigV"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۲</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">آپارتمان زعفرانیه</h2>
+                <p class="font-body-md text-on-surface-variant">تهران، زعفرانیه</p>
+            </article>
+            <article class="md:col-span-7 group cursor-pointer md:mt-[-80px]">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="ویلای بتنی لواسان" class="w-full h-[550px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7txTq1mASRSzwY1wsefbZfn7Uon7FOsjLCgn6Ap7m2-wDQteOpEfEcXsZaAPN4zKbQjk8-fzLfFaF0otSlTdrS6mYN6RMsJTZOhqnNGDhKbAN8Xlz-Qplyj0RC0-1zkTycY5Kzhmw2kFSmfcdf58I_w7SI2jntn-ukuwx5jlBZmR0MQVFL5N9aONOMbFhnIhfdh-q30vS9IHM6svEfSjQdTzJodUEceqz33ciR6fuJ_ceGNlPN8uJMYCBJoEZQZGg4dywTQ8mml2g"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۳</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">ویلای بتنی لواسان</h2>
+                <p class="font-body-md text-on-surface-variant">تهران، لواسان</p>
+            </article>
+        </div>
+
+        <!-- Year 1394 - 1395 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <article class="md:col-span-6 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="هتل بوتیک سنتی" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY-5IkEQqdlyZFTuWciRb6wTwTNaBdzCZh2TtxjnzRGNZoznzRpOtOkfTYXJXS187yexHgCtFth4o6xLSqXR9geh_EbYQjNxqAJI3EAfWwoKgRpU3bjeF4ORQaQpGBmyQaPOTVcK1KUOVXIC5d6wDfFzv1fssgGRk48Qr3DeC_ESHGqd0tmMWsaJz5vzAD37nhl-6ukNt0xr3zmG_T0J5r9fRyMmzj6xakP8GUrXra15Vy3noJPiiv6Oy8cIis5opF7zZg2CrPrv9o"/>
+                    <div class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-2 font-headline-md">۱۳۹۴</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">هتل بوتیک سنتی</h2>
+                <p class="font-body-md text-on-surface-variant">کاشان / اصفهان</p>
+            </article>
+            <article class="md:col-span-6 group cursor-pointer md:mt-12">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="پنت‌هاوس الهیه" class="w-full h-[550px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhf1tVRWRpQ5c5hsf8RNPGQ_Rg2LADkHQE2WqYqcHPTChVIaof5OUOPMCcNNP-JRgoj6MJCVXYJh_8qOCM_o4N0wRkr9QuJf1hleCZZifU1Xz_JLG26o0jSWUD623ubb4X0GoRK5k1G1Ho22W2P9H3AydeyJGq_yTwrrI_xt5qEWX2-tpXRO70hilqDNdgci7owT4JCxF2HecCPFD8Xrgfjyo4MDqOMrNXh_TnS8KLS4lRbacZwUHMe2rKBqi1KG04W7dYZPHlQoGx"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۵</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">پنت‌هاوس الهیه</h2>
+                <p class="font-body-md text-on-surface-variant">تهران، الهیه</p>
+            </article>
+        </div>
+
+        <!-- Year 1396 - 1397 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <article class="md:col-span-7 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="ویلای شمشک" class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPd-bPvOsHNWaJK5z_sOYVCM0sXQd5nKFdpAs4g2LquZmaz157Ian2Y_iV0KVb_M2rQTIzKLSz_RN-QobzwIFqKZlAFwBbhmodw5e0wEZ2bKw2ULcL-EuYeIUoe_bXbrAJ3TfhH7VdP_-5ROSgJBcn185HTzk0E5IBVINJH5rQp0mSLGuBYn01H_qgTkHOHUdZWoZCirmHs05JLj_JNan3THfQy1PnyMDq1NPrOAgeoODxQHIWVbDTeLvnY2Ae9XIdxmZDG46BpVMo"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۶</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">ویلای شمشک</h2>
+                <p class="font-body-md text-on-surface-variant">شمشک، البرز</p>
+            </article>
+            <article class="md:col-span-5 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="ویلای ساحلی خزر" class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvTBanfyjhFjZuqkk804Q832nfxehRH09_rBHGgiZ9aDyEA7x51Mk5L8PSJtRlf_lmmGl_qwQmVpKFoamMtM5DI86oN-xy1EtRMecBQ7tNmma6MNeHP-0Pixt8Jwg6ZM9g4eDptG9r_Q2l7qnX6tjZyq5IbUk-whh6YqaiPmXOB9pd0VWnyh3bUZSjJdfrP-TYWYjQqxVuJYzNR-CAWt9Cik74LT8T32RQuQq0yPTTk-yx58tuVl2hyp8PKC8_LdBI32hQKE3bxp6"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۷</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">ویلای ساحلی خزر</h2>
+                <p class="font-body-md text-on-surface-variant">سواحل دریای خزر</p>
+            </article>
+        </div>
+
+        <!-- Year 1398 - 1399 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <article class="md:col-span-5 group cursor-pointer md:mt-16">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="ساختمان فن‌آوری پردیس" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1r2d8fNvO4tE91NARMDkKXUJtwX4V2CMf5cMzpXIsJUHu30OojEDy1yhTgPaNHQZcgkbNzm99o-UsRcawhsgl1tM24A4c4ywlHSixigIE7_0E3PN359ispeFhwxy7E3vlPDDLaLkG5OAT7GwHAy54SrtCENu-n3NZSz0qTDAYiwqIZXgv_Y9uXSpaj4KyPidN37Aiw_oooXJRF6DZ5oboaY6aFXqYLDNa16Ibydll89UEvjsMiPwebhO_TciLKxGROxLUxAO8AJI0"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۸</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">ساختمان فن‌آوری پردیس</h2>
+                <p class="font-body-md text-on-surface-variant">پارک فناوری پردیس</p>
+            </article>
+            <article class="md:col-span-7 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="عمارت کویری یزد" class="w-full h-[550px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiHpUDPT9bFdc5p4bQyVSyuSkGeiXv5UH-uRQjvShTXmllKDaSSh006tpKv3oMc7IldIIx0ckTy2XqkIB0Pq8WRSnDJ-H0FDpMkXmgkqxnbaYD2KWEnVA8TFMVSXXdYmWLPKUpFOBqNKpg1Y9xDcwoBG0nAUQ3VxklAhnsSMWQH-uxwr0q3txOpDE781bWj7wj8Oseqdi0_CTrFx9JQlophh_WbwQ8cxcP96h176WisVGaE6eSjL8NxEyBVwt"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۳۹۹</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">عمارت کویری یزد</h2>
+                <p class="font-body-md text-on-surface-variant">استان یزد</p>
+            </article>
+        </div>
+
+        <!-- Year 1400 - 1401 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+            <article class="md:col-span-6 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="برج مسکونی الهیه" class="w-full h-[650px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXOhoKl_1NqL9vIc1LN0xjaUYuzQVBs9V60qfQZNJ-zP552b-hLZv8LEosUXKfPvTIWPUpl3vlIsIOEByiEecfNA0Tr3lXwDV8ePJKgxqTzazHfP_bmiP-hJugTQBC3yU28IaFaSmKeAd_XItXYr0ORXsRE1GIRTTNsquH0DuPYqqgi3LXeTsx6bzGEfeXw19pkviLQ8kooJVHM58MqlzbPkXigswuVv9RxV4_LtTEcPR3pbW83wd8jgESXdUEfvvoWzcpWMwE6m8P"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۴۰۰</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">برج مسکونی الهیه</h2>
+                <p class="font-body-md text-on-surface-variant">تهران، الهیه</p>
+            </article>
+            <article class="md:col-span-6 group cursor-pointer md:mt-32">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="ویلای انزلی" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVMW4c2Y18l-wQc3Jlj0dMZSiiuXPG_001gn_APPbu6EyNVjUbp4xsvjdIO3NSYaBaiSpjB0sEmH6vtkjx-YzFsxqA6ivkK3-figtMGxbD8Ni1Tl-vJVCZYPLTKSkTiDBKQPUwjqLPGl3RG_dP2mVqGGVlFm1Sy0v4h6ykPjtfam0K9v0whwkcUXR8xhVkaywwFabpfXs2ZWpj0CKQ5aLqVNiuclkyuPBr5UNTiuOfgocE2tjmjjKT8N0uZO6ZFEONj7mIVPBCGwr"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۴۰۱</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">ویلای انزلی</h2>
+                <p class="font-body-md text-on-surface-variant">بندر انزلی</p>
+            </article>
+        </div>
+
+        <!-- Year 1402 - 1403 Group -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+            <article class="md:col-span-4 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="جزئیات معماری تراز" class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm3wPjXQOUymbG8LdeuX7xUo27mJW9wpE1zh5JvNiYus3gGWPrsjwLG5EEj-U1Fz12IJRm3p36NhhY2RVR3xfGL8eG5roDitp8SRIdC3hF4TK5RYfFZnY6EnfiF0iu3GzjplIWRs0_Y4htmGAe0L5_s1VOnA-JB_kQijtFqwNLvljTAFSTv8Dv0-cgPLUulsGP0ohsmOoZKjOPmj0B517mvB8kZetUvIPSZPHIjAwPYmEUOvXc_-NGwbnUU6vDIn-gHT5udKTrhE_N"/>
+                    <div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 font-headline-md">۱۴۰۲</div>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors duration-300">جزئیات معماری تراز</h2>
+                <p class="font-body-md text-on-surface-variant">پروژه تراز تهران</p>
+            </article>
+            <article class="md:col-span-8 group cursor-pointer">
+                <div class="relative overflow-hidden mb-6 border border-outline-variant">
+                    <img alt="آپارتمان مسکونی الهیه" class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOAqnItjxjWqG5ncfm0AgmElT1GcHQ1VYHV7JtpZtJIP4RlJQdt3MTdvRwZvIW3SeLbaxE3LZs9MQUUNhVzn61aPW-U9bN15_218PT5D8YgVuH7ev8F6lGBpQmh0g6JTRvg-9zzsd7h6XVnh2ojL9niys09hilhwO8ddkNiYLO_DJxA8kYVi0VNiFUcCZxSoAG1UCGMUm8Vpvz2vBlJY5_TbcDNugpQee7ZzU1HdfPsPZ-_BJUpC1j7urHA5fXwwR--t6zDE5F6Jkp"/>
+                    <div class="absolute top-4 right-4 bg-secondary text-on-secondary px-6 py-3 font-display-md">۱۴۰۳</div>
+                </div>
+                <h2 class="font-display-md text-display-md text-primary group-hover:text-secondary transition-colors duration-300">آپارتمان مسکونی الهیه</h2>
+                <p class="font-body-lg text-on-surface-variant">نماد معماری نوین ایران</p>
+            </article>
+        </div>
+
+    </div>
+
+    <!-- CTA Section -->
+    <section class="mt-section-gap bg-primary text-on-primary p-12 md:p-16 text-center">
+        <div class="w-12 h-[1px] bg-secondary mx-auto mb-10"></div>
+        <h2 class="font-display-md text-display-md mb-8">پروژه بعدی شما، افتخار بعدی ما</h2>
+        <p class="font-body-lg mb-12 max-w-2xl mx-auto opacity-80">برای طراحی و اجرای پروژه‌های شاخص و ماندگار، با تیم متخصص مدبران در تماس باشید.</p>
+        <a href="contact.html" class="inline-flex items-center bg-secondary text-on-secondary px-12 py-4 font-label-lg text-lg hover:bg-secondary-fixed-dim transition-all duration-300">شروع همکاری</a>
+        <div class="w-12 h-[1px] bg-secondary mx-auto mt-10"></div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-20 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto border-t border-outline-variant">
+    <div class="md:col-span-1">
+        <span class="font-headline-md text-headline-md text-primary block mb-4">شرکت مهندسی مدبران</span>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© ۱۴۰۴ شرکت مهندسی مدبران. تمامی حقوق محفوظ است.</p>
+    </div>
+    <div class="md:col-span-1 flex flex-col gap-4">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="projects.html">پروژه‌های مسکونی</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="projects.html">پروژه‌های تجاری</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="about.html">فلسفه طراحی</a>
+    </div>
+    <div class="md:col-span-1 flex flex-col gap-4">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">فرصت‌های شغلی</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">حریم خصوصی</a>
+    </div>
+    <div class="md:col-span-1 flex flex-col gap-4">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">اینستاگرام</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">لینکدین</a>
+    </div>
+</footer>
+
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
+</body></html>

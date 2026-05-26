@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تماس با ما - شرکت مهندسی مدبران</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "outline": "#747878",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#808488",
+                    "surface-tint": "#5f5e5e",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-secondary-container": "#785a1a",
+                    "tertiary-fixed": "#e0e3e7",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container": "#eeeeee",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary": "#000000",
+                    "tertiary-container": "#181c20",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-fixed": "#ffdea5",
+                    "on-tertiary-fixed": "#181c20",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1c1b1b",
+                    "on-surface": "#1a1c1c",
+                    "secondary": "#775a19",
+                    "surface-variant": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#858383",
+                    "surface-dim": "#dadada",
+                    "on-primary-fixed-variant": "#474746",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-error-container": "#93000a",
+                    "background": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#fed488",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444748",
+                    "surface-bright": "#f9f9f9",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-fixed-variant": "#43474b",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-background": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c3c7cb"
+                },
+                borderRadius: {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+                },
+                spacing: {
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "margin-desktop": "64px"
+                },
+                fontFamily: {
+                    "body-md": ["Vazirmatn", "sans-serif"],
+                    "display-lg": ["Vazirmatn", "serif"],
+                    "headline-md": ["Vazirmatn", "serif"],
+                    "headline-lg-mobile": ["Vazirmatn", "serif"],
+                    "label-sm": ["Vazirmatn", "sans-serif"],
+                    "label-lg": ["Vazirmatn", "sans-serif"],
+                    "display-md": ["Vazirmatn", "serif"],
+                    "headline-lg": ["Vazirmatn", "serif"],
+                    "body-lg": ["Vazirmatn", "sans-serif"]
+                },
+                fontSize: {
+                    "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "display-lg": ["64px", { "lineHeight": "80px", "fontWeight": "600" }],
+                    "headline-md": ["24px", { "lineHeight": "36px", "fontWeight": "600" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "40px", "fontWeight": "600" }],
+                    "label-sm": ["12px", { "lineHeight": "18px", "fontWeight": "500" }],
+                    "label-lg": ["14px", { "lineHeight": "24px", "fontWeight": "600" }],
+                    "display-md": ["44px", { "lineHeight": "56px", "fontWeight": "600" }],
+                    "headline-lg": ["32px", { "lineHeight": "44px", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    body { font-family: 'Vazirmatn', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    [dir="rtl"] .material-symbols-outlined[data-icon="arrow_forward"] { transform: scaleX(-1); }
+    /* Form inputs */
+    input, textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #c4c7c7;
+        outline: none;
+        width: 100%;
+        padding: 12px 0;
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 16px;
+        color: #1a1c1c;
+        transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus { border-bottom-color: #775a19; }
+    input::placeholder, textarea::placeholder { color: #747878; }
+    textarea { resize: none; }
+    /* Project type buttons */
+    .type-btn {
+        border: 1px solid #c4c7c7;
+        padding: 10px 24px;
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: #444748;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .type-btn:hover { border-color: #775a19; color: #775a19; }
+    .type-btn.active { background: #000000; color: #ffffff; border-color: #000000; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+</style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-20">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto bg-surface/90 backdrop-blur-md border-b border-outline-variant left-0 right-0">
+    <a class="font-headline-md text-headline-md tracking-tighter text-primary" href="index.html">شرکت مهندسی مدبران</a>
+    <div class="hidden md:flex gap-8 items-center h-full">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300 h-full flex items-center" href="index.html">خانه</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300 h-full flex items-center" href="projects.html">نمونه کارها</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300 h-full flex items-center" href="about.html">درباره ما</a>
+        <a class="font-label-lg text-label-lg text-primary border-b-2 border-secondary font-bold opacity-80 h-full flex items-center" href="contact.html">تماس</a>
+    </div>
+    <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-6 py-2 bg-primary text-on-primary font-label-lg text-label-lg hover:bg-secondary transition-colors duration-300">درخواست مشاوره</a>
+    <button id="menu-btn" aria-label="Menu" class="md:hidden flex items-center justify-center p-2 text-primary">
+        <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-20 left-0 right-0 z-40 flex-col bg-surface border-b border-outline-variant px-margin-mobile py-6 gap-6 max-w-container-max mx-auto">
+    <a class="font-label-lg text-label-lg text-on-surface-variant" href="index.html">خانه</a>
+    <a class="font-label-lg text-label-lg text-on-surface-variant" href="projects.html">نمونه کارها</a>
+    <a class="font-label-lg text-label-lg text-on-surface-variant" href="about.html">درباره ما</a>
+    <a class="font-label-lg text-label-lg text-primary font-bold" href="contact.html">تماس</a>
+</div>
+
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+
+    <!-- Page Header -->
+    <header class="mb-20 max-w-2xl">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-secondary mb-4">ارتباط با ما</p>
+        <h1 class="font-display-lg text-display-lg text-primary mb-6 hidden md:block">درخواست‌ها</h1>
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6 md:hidden">درخواست‌ها</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">ما به هر پروژه با دقت و تعهد به کیفیت نگاه می‌کنیم. برای گفتگو درباره چشم‌انداز مسکونی یا تجاری خود با ما تماس بگیرید.</p>
+    </header>
+
+    <hr class="border-t border-outline-variant w-full mb-20"/>
+
+    <!-- Two-column layout -->
+    <div class="grid md:grid-cols-12 gap-16 md:gap-gutter">
+
+        <!-- Contact Form -->
+        <div class="md:col-span-7">
+            <form class="space-y-10" onsubmit="handleSubmit(event)">
+
+                <!-- Name + Email row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-3">نام و نام خانوادگی</label>
+                        <input type="text" placeholder="نام کامل خود را وارد کنید" required/>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-3">آدرس ایمیل</label>
+                        <input type="email" placeholder="example@domain.com" required/>
+                    </div>
+                </div>
+
+                <!-- Project Type -->
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-4">نوع پروژه</label>
+                    <div class="flex flex-wrap gap-3">
+                        <button type="button" class="type-btn active" onclick="selectType(this)">مسکونی</button>
+                        <button type="button" class="type-btn" onclick="selectType(this)">تجاری</button>
+                        <button type="button" class="type-btn" onclick="selectType(this)">بازسازی</button>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-3">شماره تماس</label>
+                    <input type="tel" placeholder="۰۹۱۲ ۰۰۰ ۰۰۰۰"/>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-3">پیام شما</label>
+                    <textarea rows="5" placeholder="درباره پروژه خود بیشتر توضیح دهید — ابعاد، بودجه تقریبی، موقعیت مکانی و هر جزئیاتی که مفید به نظر می‌رسد."></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="pt-4">
+                    <button type="submit" class="inline-flex items-center gap-3 bg-primary text-on-primary font-label-lg text-label-lg px-10 py-4 hover:bg-secondary transition-colors duration-300">
+                        ارسال درخواست
+                        <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div id="success-msg" class="hidden mt-8 p-6 border border-secondary bg-secondary/5">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-8 h-[1px] bg-secondary"></div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-secondary">درخواست ارسال شد</p>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">با تشکر از تماس شما. تیم مدبران ظرف ۴۸ ساعت کاری پاسخ خواهد داد.</p>
+            </div>
+        </div>
+
+        <!-- Contact Info + Image -->
+        <div class="md:col-span-5 flex flex-col gap-10">
+
+            <!-- Office Address -->
+            <div class="border border-outline-variant p-8">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-secondary mb-5">دفتر مرکزی</p>
+                <address class="not-italic">
+                    <p class="font-headline-md text-headline-md text-primary leading-snug mb-1">خیابان ولیعصر</p>
+                    <p class="font-headline-md text-headline-md text-primary leading-snug mb-1">بلاک ۱۲۰، واحد ۴</p>
+                    <p class="font-headline-md text-headline-md text-primary leading-snug">تهران، ایران</p>
+                </address>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="border border-outline-variant p-8">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-secondary mb-5">ارتباط مستقیم</p>
+                <div class="flex flex-col gap-3">
+                    <a href="mailto:inquiries@modabberan.com" class="font-body-lg text-body-lg text-primary hover:text-secondary transition-colors duration-300 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base text-on-surface-variant">mail</span>
+                        inquiries@modabberan.com
+                    </a>
+                    <a href="tel:02155550198" class="font-body-lg text-body-lg text-primary hover:text-secondary transition-colors duration-300 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base text-on-surface-variant">phone</span>
+                        ۰۲۱-۵۵۵۵۰۱۹۸
+                    </a>
+                </div>
+            </div>
+
+            <!-- Architectural detail image -->
+            <div class="border border-outline-variant overflow-hidden flex-1 min-h-[300px]">
+                <img alt="جزئیات معماری مدبران" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm3wPjXQOUymbG8LdeuX7xUo27mJW9wpE1zh5JvNiYus3gGWPrsjwLG5EEj-U1Fz12IJRm3p36NhhY2RVR3xfGL8eG5roDitp8SRIdC3hF4TK5RYfFZnY6EnfiF0iu3GzjplIWRs0_Y4htmGAe0L5_s1VOnA-JB_kQijtFqwNLvljTAFSTv8Dv0-cgPLUulsGP0ohsmOoZKjOPmj0B517mvB8kZetUvIPSZPHIjAwPYmEUOvXc_-NGwbnUU6vDIn-gHT5udKTrhE_N"/>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="border-t border-outline-variant pt-6">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-secondary mb-3">ساعات کاری</p>
+                <p class="font-body-md text-body-md text-on-surface-variant">شنبه تا چهارشنبه: ۸ صبح – ۶ عصر</p>
+                <p class="font-body-md text-body-md text-on-surface-variant">پنج‌شنبه: ۸ صبح – ۲ بعدازظهر</p>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 grid grid-cols-1 md:grid-cols-4 gap-gutter">
+        <div class="md:col-span-4 mb-10">
+            <span class="font-headline-md text-headline-md text-primary">شرکت مهندسی مدبران</span>
+        </div>
+        <div class="flex flex-col gap-4">
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="projects.html">پروژه‌های مسکونی</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="projects.html">پروژه‌های تجاری</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="about.html">فلسفه طراحی</a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">فرصت‌های شغلی</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">حریم خصوصی</a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">اینستاگرام</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">لینکدین</a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="contact.html">تماس با ما</a>
+            <p class="font-label-lg text-label-lg text-on-surface-variant">inquiries@modabberan.com</p>
+        </div>
+        <div class="md:col-span-4 mt-12 pt-8 border-t border-outline-variant">
+            <p class="font-body-md text-body-md text-on-surface-variant">© ۱۴۰۴ شرکت مهندسی مدبران. تمامی حقوق محفوظ است. دقت در اجرا، تعهد در ساخت.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('open'));
+
+    // Project type selector
+    function selectType(el) {
+        document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+    }
+
+    // Form submission
+    function handleSubmit(e) {
+        e.preventDefault();
+        document.getElementById('success-msg').classList.remove('hidden');
+        e.target.style.opacity = '0.4';
+        e.target.style.pointerEvents = 'none';
+    }
+</script>
+</body>
+</html>
