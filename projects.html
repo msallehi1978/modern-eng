@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>نمونه کارها - شرکت مهندسی مدبران</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Vazirmatn',sans-serif;background:#080808;color:#F0EBE3;overflow-x:hidden;margin:0}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9998;opacity:.5}
+#nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:0 4rem;height:80px;background:rgba(8,8,8,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+@media(max-width:768px){#nav{padding:0 1.25rem}}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.rev.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+.pimg{transition:transform .9s cubic-bezier(.25,.46,.45,.94);transform:scale(1.02)}
+.pcard:hover .pimg{transform:scale(1)}
+.pcard:hover .ptitle{color:#BFA26A}
+.ptitle{color:#F0EBE3;transition:color .4s ease}
+#mob{display:none;flex-direction:column;position:fixed;top:80px;inset-x:0;z-index:40;background:#101010;border-bottom:1px solid #1E1E1E;padding:2rem 1.25rem;gap:1.5rem}
+#mob.on{display:flex}
+.arr{transform:scaleX(-1)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#080808}::-webkit-scrollbar-thumb{background:#2A2A2A}::-webkit-scrollbar-thumb:hover{background:#BFA26A}
+.yr{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg)}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" style="font-weight:600;font-size:1.15rem;color:#F0EBE3;text-decoration:none">شرکت مهندسی مدبران</a>
+  <div id="desk" style="display:none;align-items:center">
+    <a href="index.html"    style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#686868;text-decoration:none;margin-left:2rem;transition:color .3s" onmouseover="this.style.color='#F0EBE3'" onmouseout="this.style.color='#686868'">خانه</a>
+    <a href="projects.html" style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#BFA26A;text-decoration:none;margin-left:2rem;border-bottom:1px solid rgba(191,162,106,.4);padding-bottom:2px">نمونه کارها</a>
+    <a href="about.html"    style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#686868;text-decoration:none;margin-left:2rem;transition:color .3s" onmouseover="this.style.color='#F0EBE3'" onmouseout="this.style.color='#686868'">درباره ما</a>
+    <a href="contact.html"  style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#686868;text-decoration:none;transition:color .3s" onmouseover="this.style.color='#F0EBE3'" onmouseout="this.style.color='#686868'">تماس</a>
+  </div>
+  <a href="contact.html" id="ncta" style="display:none;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);color:#F0EBE3;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;padding:10px 22px;text-decoration:none;transition:border-color .3s" onmouseover="this.style.borderColor='rgba(191,162,106,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.12)'">مشاوره</a>
+  <button id="mbt" style="background:none;border:none;cursor:pointer;color:#F0EBE3;padding:8px;display:flex"><svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M0 1h20M0 7h20M0 13h20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+</nav>
+<div id="mob">
+  <a href="index.html"    style="font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#686868;text-decoration:none">خانه</a>
+  <a href="projects.html" style="font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#BFA26A;text-decoration:none">نمونه کارها</a>
+  <a href="about.html"    style="font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#686868;text-decoration:none">درباره ما</a>
+  <a href="contact.html"  style="font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:#686868;text-decoration:none">تماس</a>
+</div>
+
+<!-- HEADER -->
+<div style="padding-top:80px;max-width:1440px;margin:0 auto;padding-right:4rem;padding-left:4rem;padding-bottom:4rem;margin-top:0">
+  <div style="padding-top:5rem">
+    <div class="rev" style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+      <div style="width:2rem;height:1px;background:#BFA26A;opacity:.7"></div>
+      <span style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.35em;color:rgba(191,162,106,.85)">پورتفولیو</span>
+    </div>
+    <h1 class="rev d1" style="font-size:clamp(3rem,8vw,7rem);font-weight:800;line-height:.92;letter-spacing:-.04em;color:#F0EBE3;margin-bottom:1.5rem">گاه‌شمار<br/>پروژه‌ها</h1>
+    <p class="rev d2" style="font-size:1rem;font-weight:300;color:#686868;max-width:34rem;line-height:1.85">مروری بر سیر تکامل معماری مدبران از سال ۱۳۹۰ تا به امروز — مجموعه‌ای از سازه‌های برگزیده که هر یک برگی از افتخارات مهندسی کشور هستند.</p>
+  </div>
+  <div style="border-top:1px solid rgba(191,162,106,.2);margin-top:4rem"></div>
+</div>
+
+<!-- TIMELINE -->
+<div style="max-width:1440px;margin:0 auto;padding:0 4rem 8rem;display:flex;flex-direction:column;gap:6rem">
+
+  <!-- 1390-1391 -->
+  <div class="rev" style="display:grid;grid-template-columns:auto 1fr 1fr;gap:2rem;align-items:start">
+    <div style="padding-top:1rem;color:rgba(191,162,106,.25);font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;letter-spacing:.05em" class="yr">۱۳۹۰ – ۱۳۹۱</div>
+    <article class="pcard" style="cursor:pointer">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgViC9udN0s504nmZh87kLLD1IOaaBEIktdQ560zWvrGfsf33gzueCSfGoblwFV0DCcB9eKaCShDf9WBtZ6wEy0vEEiddCXrd_OOuMRg1rze4b4wZSqKyGl19DpKMlIP1pIHJ_KDE69QvgQrAHpHPWPazF-zaI7IoXcu8tkW4BtRrdYdzNKdZg8taOGQvGrjlk_rsuiaxyzSMgQ1wBV7LlioHBBnYQvB6neX08vlb3qGVPZ1jrDxUoJ7f_CGSrSlTJCe8nPs9at31g" alt="" class="pimg" style="width:100%;height:420px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#BFA26A;color:#080808;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۰</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">ویلا مدرن خزر</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">مازندران</p>
+    </article>
+    <article class="pcard" style="cursor:pointer;margin-top:4rem">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi7zUsafwhSl8TXMNxL7-aQGH_cHP9NwgEXP0FsQw8qgP6PZK7RgeC0aHudv4WgJLPopADbAjfl87p937LLZMQ2ZYaikHzMTct-9x9-AR3ClxZP1GIpOglMX26ApiZwEvC_MkoBO6Mvjg5luW9DAnNwekEWij2Ev_VDV4zjHJ9y-H_SgfJla_No-pzXn1ODDgJyu43QgHdi8x972PUW8DXwNckeJGXQ4wC1ehR9wWaeW-b_2wlZSQdti3bZ9kIEhi9Q_bdC25qF5OR" alt="" class="pimg" style="width:100%;height:340px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#1E1E1E;color:#F0EBE3;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۱</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">مجتمع اداری ولیعصر</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">کرمان</p>
+    </article>
+  </div>
+
+  <!-- 1392-1393 -->
+  <div class="rev" style="display:grid;grid-template-columns:auto 1fr 1fr;gap:2rem;align-items:start">
+    <div style="padding-top:1rem;color:rgba(191,162,106,.25);font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;letter-spacing:.05em" class="yr">۱۳۹۲ – ۱۳۹۳</div>
+    <article class="pcard" style="cursor:pointer;margin-top:-3rem">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdoA5cA8ZoKNA_h43H0UMvpj8BbJnqj3ZM4Kw3e_tLFCZufSPlewpzHNwEbrUn0QE-OwyAAg7egmfvnbU4Cl2a6jkaDS1TTNYOxnRPLjJmD7IR_fFrLxtjA_POCuLQc2J5Z0-tr1Bw6t6roexxupdi9C3wTP5NlbrytY-x1St-ReAW1doJgrsKOa8F0P3NbAqQ2heUtuQQgBotjy8bzoXomMu8GNiXHkniEZQ9Xi56RQo4kuKR-J21oNbqAnAiQ727xjbHvgxfeigV" alt="" class="pimg" style="width:100%;height:500px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#1E1E1E;color:#F0EBE3;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۲</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">آپارتمان زعفرانیه</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">تهران، زعفرانیه</p>
+    </article>
+    <article class="pcard" style="cursor:pointer">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7txTq1mASRSzwY1wsefbZfn7Uon7FOsjLCgn6Ap7m2-wDQteOpEfEcXsZaAPN4zKbQjk8-fzLfFaF0otSlTdrS6mYN6RMsJTZOhqnNGDhKbAN8Xlz-Qplyj0RC0-1zkTycY5Kzhmw2kFSmfcdf58I_w7SI2jntn-ukuwx5jlBZmR0MQVFL5N9aONOMbFhnIhfdh-q30vS9IHM6svEfSjQdTzJodUEceqz33ciR6fuJ_ceGNlPN8uJMYCBJoEZQZGg4dywTQ8mml2g" alt="" class="pimg" style="width:100%;height:460px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#1E1E1E;color:#F0EBE3;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۳</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">ویلای بتنی لواسان</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">تهران، لواسان</p>
+    </article>
+  </div>
+
+  <!-- 1394-1395 -->
+  <div class="rev" style="display:grid;grid-template-columns:auto 1fr 1fr;gap:2rem;align-items:start">
+    <div style="padding-top:1rem;color:rgba(191,162,106,.25);font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;letter-spacing:.05em" class="yr">۱۳۹۴ – ۱۳۹۵</div>
+    <article class="pcard" style="cursor:pointer;margin-top:3rem">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhf1tVRWRpQ5c5hsf8RNPGQ_Rg2LADkHQE2WqYqcHPTChVIaof5OUOPMCcNNP-JRgoj6MJCVXYJh_8qOCM_o4N0wRkr9QuJf1hleCZZifU1Xz_JLG26o0jSWUD623ubb4X0GoRK5k1G1Ho22W2P9H3AydeyJGq_yTwrrI_xt5qEWX2-tpXRO70hilqDNdgci7owT4JCxF2HecCPFD8Xrgfjyo4MDqOMrNXh_TnS8KLS4lRbacZwUHMe2rKBqi1KG04W7dYZPHlQoGx" alt="" class="pimg" style="width:100%;height:460px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#1E1E1E;color:#F0EBE3;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۵</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">پنت‌هاوس الهیه</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">تهران، الهیه</p>
+    </article>
+  </div>
+
+  <!-- 1396-1397 -->
+  <div class="rev" style="display:grid;grid-template-columns:auto 1fr 1fr;gap:2rem;align-items:center">
+    <div style="padding-top:1rem;color:rgba(191,162,106,.25);font-size:clamp(.8rem,1.5vw,1rem);font-weight:700;letter-spacing:.05em" class="yr">۱۳۹۶ – ۱۳۹۷</div>
+    <article class="pcard" style="cursor:pointer">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPd-bPvOsHNWaJK5z_sOYVCM0sXQd5nKFdpAs4g2LquZmaz157Ian2Y_iV0KVb_M2rQTIzKLSz_RN-QobzwIFqKZlAFwBbhmodw5e0wEZ2bKw2ULcL-EuYeIUoe_bXbrAJ3TfhH7VdP_-5ROSgJBcn185HTzk0E5IBVINJH5rQp0mSLGuBYn01H_qgTkHOHUdZWoZCirmHs05JLj_JNan3THfQy1PnyMDq1NPrOAgeoODxQHIWVbDTeLvnY2Ae9XIdxmZDG46BpVMo" alt="" class="pimg" style="width:100%;height:520px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#1E1E1E;color:#F0EBE3;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۶</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">ویلای شمشک</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">شمشک، البرز</p>
+    </article>
+    <article class="pcard" style="cursor:pointer">
+      <div style="overflow:hidden;margin-bottom:1.25rem;border:1px solid #1E1E1E;position:relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvTBanfyjhFjZuqkk804Q832nfxehRH09_rBHGgiZ9aDyEA7x51Mk5L8PSJtRlf_lmmGl_qwQmVpKFoamMtM5DI86oN-xy1EtRMecBQ7tNmma6MNeHP-0Pixt8Jwg6ZM9g4eDptG9r_Q2l7qnX6tjZyq5IbUk-whh6YqaiPmXOB9pd0VWnyh3bUZSjJdfrP-TYWYjQqxVuJYzNR-CAWt9Cik74LT8T32RQuQq0yPTTk-yx58tuVl2hyp8PKC8_LdBI32hQKE3bxp6" alt="" class="pimg" style="width:100%;height:360px;object-fit:cover;display:block"/>
+        <div style="position:absolute;top:1rem;right:1rem;background:#1E1E1E;color:#F0EBE3;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:5px 10px">۱۳۹۷</div>
+      </div>
+      <h2 class="ptitle" style="font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.3rem">ویلای ساحلی خزر</h2>
+      <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">سواحل دریای خزر</p>
+    </article>
+  </div>
+
+  <!-- 1400-1403 featured -->
+  <div class="rev" style="border-top:1px solid rgba(191,162,106,.2);padding-top:4rem">
+    <span style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.3em;color:#BFA26A;display:block;margin-bottom:2rem">پروژه‌های اخیر</span>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1E1E1E">
+      <article class="pcard" style="cursor:pointer;background:#101010;overflow:hidden;margin-top:2rem">
+        <div style="overflow:hidden;height:360px">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVMW4c2Y18l-wQc3Jlj0dMZSiiuXPG_001gn_APPbu6EyNVjUbp4xsvjdIO3NSYaBaiSpjB0sEmH6vtkjx-YzFsxqA6ivkK3-figtMGxbD8Ni1Tl-vJVCZYPLTKSkTiDBKQPUwjqLPGl3RG_dP2mVqGGVlFm1Sy0v4h6ykPjtfam0K9v0whwkcUXR8xhVkaywwFabpfXs2ZWpj0CKQ5aLqVNiuclkyuPBr5UNTiuOfgocE2tjmjjKT8N0uZO6ZFEONj7mIVPBCGwr" alt="" class="pimg" style="width:100%;height:100%;object-fit:cover"/>
+        </div>
+        <div style="padding:1.5rem 1.75rem">
+          <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#BFA26A;margin-bottom:.4rem">۱۴۰۱</p>
+          <h2 class="ptitle" style="font-size:1.2rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.25rem">ویلای انزلی</h2>
+          <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">بندر انزلی</p>
+        </div>
+      </article>
+      <article class="pcard" style="cursor:pointer;background:#101010;overflow:hidden">
+        <div style="overflow:hidden;height:360px">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOAqnItjxjWqG5ncfm0AgmElT1GcHQ1VYHV7JtpZtJIP4RlJQdt3MTdvRwZvIW3SeLbaxE3LZs9MQUUNhVzn61aPW-U9bN15_218PT5D8YgVuH7ev8F6lGBpQmh0g6JTRvg-9zzsd7h6XVnh2ojL9niys09hilhwO8ddkNiYLO_DJxA8kYVi0VNiFUcCZxSoAG1UCGMUm8Vpvz2vBlJY5_TbcDNugpQee7ZzU1HdfPsPZ-_BJUpC1j7urHA5fXwwR--t6zDE5F6Jkp" alt="" class="pimg" style="width:100%;height:100%;object-fit:cover"/>
+        </div>
+        <div style="padding:1.5rem 1.75rem">
+          <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#BFA26A;margin-bottom:.4rem">۱۴۰۳</p>
+          <h2 class="ptitle" style="font-size:1.2rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.25rem">آپارتمان مسکونی الهیه</h2>
+          <p style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.15em;color:#686868">نماد معماری نوین ایران</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section style="background:#BFA26A">
+  <div style="max-width:1440px;margin:0 auto;padding:5rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem">
+    <div>
+      <h2 style="font-size:clamp(1.5rem,3vw,2.5rem);font-weight:700;letter-spacing:-.03em;color:#080808;margin-bottom:.5rem">پروژه بعدی شما، افتخار بعدی ما</h2>
+      <p style="font-size:.9375rem;font-weight:400;color:rgba(8,8,8,.65)">با تیم متخصص مدبران در تماس باشید.</p>
+    </div>
+    <a href="contact.html" style="background:#080808;color:#F0EBE3;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;padding:15px 36px;text-decoration:none;transition:background .3s;white-space:nowrap" onmouseover="this.style.background='#181818'" onmouseout="this.style.background='#080808'">شروع همکاری</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top:1px solid #1E1E1E;background:#080808">
+  <div style="max-width:1440px;margin:0 auto;padding:4rem">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:3rem;margin-bottom:3rem">
+      <p style="font-size:1.1rem;font-weight:700;color:#F0EBE3">شرکت مهندسی مدبران</p>
+      <div style="display:flex;gap:4rem;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <a href="index.html"    style="font-size:.8rem;color:#686868;text-decoration:none;transition:color .3s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">خانه</a>
+          <a href="about.html"    style="font-size:.8rem;color:#686868;text-decoration:none;transition:color .3s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">درباره ما</a>
+          <a href="contact.html"  style="font-size:.8rem;color:#686868;text-decoration:none;transition:color .3s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">تماس</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <a href="#" style="font-size:.8rem;color:#686868;text-decoration:none;transition:color .3s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">اینستاگرام</a>
+          <a href="#" style="font-size:.8rem;color:#686868;text-decoration:none;transition:color .3s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">لینکدین</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #1E1E1E;padding-top:1.5rem">
+      <p style="font-size:11px;font-weight:300;color:#686868">© ۱۴۰۴ شرکت مهندسی مدبران. تمامی حقوق محفوظ است.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+@media(min-width:768px){#desk{display:flex!important}#ncta{display:flex!important}#mbt{display:none!important}}
+@media(max-width:767px){
+  div[style*="padding:0 4rem"]{padding-left:1.25rem!important;padding-right:1.25rem!important}
+  div[style*="grid-template-columns:auto 1fr 1fr"],div[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
+  .yr{writing-mode:horizontal-tb!important;transform:none!important;font-size:.7rem!important}
+  article[style*="margin-top"]{margin-top:0!important}
+  section[style*="padding:5rem 4rem"]{padding-left:1.25rem!important;padding-right:1.25rem!important;flex-direction:column!important}
+  footer div[style*="padding:4rem"]{padding:2rem 1.25rem!important}
+}
+</style>
+<script>
+document.getElementById('mbt').addEventListener('click',()=>document.getElementById('mob').classList.toggle('on'));
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+</script>
+</body></html>

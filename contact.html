@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تماس با ما — مدبران</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      'base':'#080808','surface':'#101010','s2':'#181818','s3':'#242424',
+      'txt':'#F0EBE3','muted':'#686868','dim':'#3A3A3A',
+      'gold':'#BFA26A','goldl':'#D4B87A','goldd':'#2C2010','bdr':'#1E1E1E'
+    },
+    fontFamily: { vazir:['Vazirmatn','sans-serif'], bodoni:['Bodoni Moda','serif'] }
+  }}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;600;700;800;900&family=Bodoni+Moda:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#080808;color:#F0EBE3;font-family:'Vazirmatn',sans-serif;overflow-x:hidden}
+  body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.025;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+
+  /* NAV */
+  #nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s,padding .3s}
+  #nav.solid{background:rgba(8,8,8,.92);backdrop-filter:blur(16px);padding:14px 48px;border-bottom:1px solid #1E1E1E}
+  #logo{font-size:1.1rem;font-weight:700;letter-spacing:.04em;color:#F0EBE3;text-decoration:none}
+  #logo span{color:#BFA26A}
+  #desk{display:none;gap:32px;align-items:center}
+  #desk a{font-size:.8rem;font-weight:500;letter-spacing:.1em;color:#686868;text-decoration:none;text-transform:uppercase;transition:color .2s}
+  #desk a:hover,#desk a.act{color:#F0EBE3}
+  #ncta{display:none;align-items:center;gap:12px}
+  .btn-g{background:#BFA26A;color:#080808;font-family:'Vazirmatn',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;padding:10px 22px;border:none;cursor:pointer;transition:background .2s}
+  .btn-g:hover{background:#D4B87A}
+  #mbt{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:5px;padding:4px}
+  #mbt span{display:block;width:22px;height:1.5px;background:#F0EBE3;transition:transform .3s,opacity .3s}
+  #mob{position:fixed;inset:0;background:#080808;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.77,0,.175,1)}
+  #mob.open{transform:translateY(0)}
+  #mob a{font-size:1.4rem;font-weight:300;letter-spacing:.08em;color:#F0EBE3;text-decoration:none}
+  #mob a:hover{color:#BFA26A}
+  @media(min-width:768px){
+    #desk{display:flex!important}
+    #ncta{display:flex!important}
+    #mbt{display:none!important}
+  }
+
+  /* SCROLL REVEAL */
+  .rev{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+  .rev.in{opacity:1;transform:translateY(0)}
+
+  /* FORM FIELDS */
+  .fld{display:flex;flex-direction:column;gap:6px}
+  .fld label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#686868}
+  .fld input,.fld textarea,.fld select{
+    background:transparent;border:none;border-bottom:1px solid rgba(240,235,227,.12);
+    color:#F0EBE3;font-family:'Vazirmatn',sans-serif;font-size:.95rem;
+    padding:10px 0;outline:none;width:100%;transition:border-color .3s;resize:none}
+  .fld input:focus,.fld textarea:focus,.fld select:focus{border-bottom-color:#BFA26A}
+  .fld input::placeholder,.fld textarea::placeholder{color:#3A3A3A}
+  .fld select option{background:#181818;color:#F0EBE3}
+
+  /* TYPE TOGGLE */
+  .typ button{
+    background:transparent;border:1px solid #3A3A3A;color:#686868;
+    font-family:'Vazirmatn',sans-serif;font-size:.78rem;letter-spacing:.06em;
+    padding:8px 18px;cursor:pointer;transition:all .25s}
+  .typ button:hover{border-color:#BFA26A;color:#BFA26A}
+  .typ button.sel{background:#BFA26A;border-color:#BFA26A;color:#080808;font-weight:700}
+
+  /* INFO LABELS */
+  .info-lbl{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:#BFA26A;margin-bottom:8px}
+  .info-val{font-size:.88rem;color:#F0EBE3;line-height:1.8}
+
+  /* SUCCESS */
+  #success{display:none;position:fixed;inset:0;background:rgba(8,8,8,.97);z-index:200;
+    flex-direction:column;align-items:center;justify-content:center;gap:24px}
+  #success.show{display:flex}
+
+  /* FOOTER LINKS */
+  .f-link{color:#686868;text-decoration:none;font-size:.78rem;transition:color .2s}
+  .f-link:hover{color:#BFA26A}
+
+  /* ARR RTL */
+  .arr{transform:scaleX(-1)}
+
+  @media(max-width:767px){
+    #nav{padding:16px 20px}
+    #nav.solid{padding:12px 20px}
+    .cgrid{grid-template-columns:1fr!important}
+    .info-col{border-right:none!important;padding-right:0!important;padding-top:48px;border-top:1px solid #1E1E1E}
+    .two-col{grid-template-columns:1fr!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="pl" style="position:fixed;inset:0;background:#080808;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .6s">
+  <div style="font-size:1.2rem;font-weight:700;letter-spacing:.12em;color:#F0EBE3">مدبران<span style="color:#BFA26A">.</span></div>
+  <div style="width:80px;height:1px;background:#1E1E1E;position:relative;overflow:hidden">
+    <div id="pll" style="position:absolute;top:0;right:0;height:1px;width:0;background:#BFA26A;transition:width 1s ease"></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" id="logo">مدبران<span>.</span></a>
+  <div id="desk">
+    <a href="index.html">خانه</a>
+    <a href="about.html">درباره</a>
+    <a href="projects.html">پروژه‌ها</a>
+    <a href="contact.html" class="act">تماس</a>
+  </div>
+  <div id="ncta">
+    <a href="contact.html" class="btn-g">مشاوره رایگان</a>
+  </div>
+  <button id="mbt" onclick="toggleMob()" aria-label="منو">
+    <span id="b1"></span><span id="b2"></span><span id="b3"></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mob">
+  <a href="index.html" onclick="toggleMob()">خانه</a>
+  <a href="about.html" onclick="toggleMob()">درباره ما</a>
+  <a href="projects.html" onclick="toggleMob()">پروژه‌ها</a>
+  <a href="contact.html" onclick="toggleMob()">تماس</a>
+  <a href="contact.html" class="btn-g" style="margin-top:8px">مشاوره رایگان</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section style="padding:160px 48px 80px;max-width:1440px;margin:0 auto">
+  <div class="rev" style="display:flex;align-items:center;gap:16px">
+    <div style="width:36px;height:1px;background:#BFA26A"></div>
+    <span style="font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#BFA26A">تماس با ما</span>
+  </div>
+  <h1 class="rev" style="font-size:clamp(3rem,9vw,7.5rem);font-weight:200;letter-spacing:-.02em;line-height:.95;margin-top:28px">
+    بیایید<br>
+    <em style="font-family:'Bodoni Moda',serif;font-style:italic;font-weight:400;color:#BFA26A">با هم</em><br>
+    بسازیم
+  </h1>
+  <p class="rev" style="max-width:480px;color:#686868;font-size:.92rem;line-height:2;margin-top:32px;font-weight:300">
+    از ایده تا تحویل کلید — تیم مدبران در هر مرحله همراه شماست.<br>پروژه خود را با ما در میان بگذارید.
+  </p>
+</section>
+
+<div style="border-top:1px solid #1E1E1E"></div>
+
+<!-- ═══════════ CONTACT GRID ═══════════ -->
+<section style="max-width:1440px;margin:0 auto;padding:80px 48px 120px">
+  <div class="cgrid" style="display:grid;grid-template-columns:3fr 2fr;gap:80px;align-items:start">
+
+    <!-- ─── FORM ─── -->
+    <div>
+      <p class="rev" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#686868;margin-bottom:48px">فرم درخواست پروژه</p>
+
+      <form id="cform" onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:40px" novalidate>
+
+        <!-- Name + Phone -->
+        <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+          <div class="fld rev">
+            <label for="fname">نام کامل</label>
+            <input type="text" id="fname" name="fname" placeholder="نام و نام خانوادگی" required>
+          </div>
+          <div class="fld rev">
+            <label for="fphone">شماره تماس</label>
+            <input type="tel" id="fphone" name="fphone" placeholder="۰۹۱۲–۰۰۰–۰۰۰۰">
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="fld rev">
+          <label for="femail">پست الکترونیک</label>
+          <input type="email" id="femail" name="femail" placeholder="example@domain.com">
+        </div>
+
+        <!-- Project Type -->
+        <div class="rev" style="display:flex;flex-direction:column;gap:16px">
+          <span style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#686868">نوع پروژه</span>
+          <div class="typ" id="typBtns" style="display:flex;gap:10px;flex-wrap:wrap">
+            <button type="button" onclick="selTyp(this)">مسکونی</button>
+            <button type="button" onclick="selTyp(this)">تجاری</button>
+            <button type="button" onclick="selTyp(this)" class="sel">بازسازی</button>
+            <button type="button" onclick="selTyp(this)">صنعتی</button>
+            <button type="button" onclick="selTyp(this)">لوکس</button>
+          </div>
+          <input type="hidden" id="ftype" name="ftype" value="بازسازی">
+        </div>
+
+        <!-- Budget -->
+        <div class="fld rev">
+          <label for="fbudget">بودجه تقریبی</label>
+          <select id="fbudget" name="fbudget">
+            <option value="">— انتخاب کنید —</option>
+            <option value="500m">کمتر از ۵۰۰ میلیون تومان</option>
+            <option value="1b">۵۰۰ میلیون تا ۱ میلیارد تومان</option>
+            <option value="3b">۱ تا ۳ میلیارد تومان</option>
+            <option value="5b">۳ تا ۵ میلیارد تومان</option>
+            <option value="5b+">بیش از ۵ میلیارد تومان</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div class="fld rev">
+          <label for="fmsg">شرح پروژه</label>
+          <textarea id="fmsg" name="fmsg" rows="5" placeholder="موقعیت، متراژ، نیازها و انتظارات خود را بنویسید…"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="rev" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+          <button type="submit" id="sbtn" class="btn-g" style="font-size:.85rem;padding:16px 40px;display:flex;align-items:center;gap:12px;cursor:pointer">
+            ارسال درخواست
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arr"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <span style="font-size:.72rem;color:#3A3A3A;line-height:1.7">ظرف ۴۸ ساعت<br>با شما تماس می‌گیریم</span>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- ─── INFO PANEL ─── -->
+    <div class="info-col rev" style="border-right:1px solid #1E1E1E;padding-right:64px;display:flex;flex-direction:column;gap:48px">
+
+      <div>
+        <p class="info-lbl">دفتر مرکزی</p>
+        <p class="info-val">خیابان گلستان پنجم، نبش اسلامی<br>ساختمان آرسس، واحد ۴۰۴<br>پاسداران، تهران</p>
+      </div>
+
+      <div>
+        <p class="info-lbl">تماس مستقیم</p>
+        <p class="info-val">
+          <a href="tel:02121005667" style="color:#F0EBE3;text-decoration:none;display:block;transition:color .2s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#F0EBE3'">۰۲۱۲۱۰۰۵۶۶۷</a>
+        </p>
+      </div>
+
+      <div>
+        <p class="info-lbl">ساعات کاری</p>
+        <p class="info-val">شنبه تا چهارشنبه<br>۸:۳۰ صبح — ۵:۳۰ عصر</p>
+      </div>
+
+      <div style="border-top:1px solid #1E1E1E"></div>
+
+      <!-- Architectural image -->
+      <div style="position:relative;overflow:hidden;aspect-ratio:3/4">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="جزئیات معماری"
+          loading="lazy" style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(.65);transition:transform 6s ease,filter 6s ease"
+          onmouseover="this.style.transform='scale(1.05)';this.style.filter='grayscale(0%) brightness(.85)'"
+          onmouseout="this.style.transform='scale(1)';this.style.filter='grayscale(30%) brightness(.65)'">
+        <!-- Corner marks -->
+        <div style="position:absolute;top:16px;left:16px;width:28px;height:28px;border-top:1px solid #BFA26A;border-left:1px solid #BFA26A;pointer-events:none"></div>
+        <div style="position:absolute;bottom:16px;right:16px;width:28px;height:28px;border-bottom:1px solid #BFA26A;border-right:1px solid #BFA26A;pointer-events:none"></div>
+        <div style="position:absolute;bottom:0;right:0;left:0;padding:28px 20px 20px;background:linear-gradient(transparent,rgba(8,8,8,.85));pointer-events:none">
+          <p style="font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#BFA26A">مدبران — تهران ۱۴۰۳</p>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <p class="info-lbl" style="margin-bottom:16px">شبکه‌های اجتماعی</p>
+        <div style="display:flex;gap:24px">
+          <a href="#" style="color:#686868;text-decoration:none;font-size:.75rem;letter-spacing:.08em;transition:color .2s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">اینستاگرام</a>
+          <a href="#" style="color:#686868;text-decoration:none;font-size:.75rem;letter-spacing:.08em;transition:color .2s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">لینکدین</a>
+          <a href="#" style="color:#686868;text-decoration:none;font-size:.75rem;letter-spacing:.08em;transition:color .2s" onmouseover="this.style.color='#BFA26A'" onmouseout="this.style.color='#686868'">تلگرام</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ QUOTE STRIP ═══════════ -->
+<section style="border-top:1px solid #1E1E1E;border-bottom:1px solid #1E1E1E;padding:72px 48px;background:#0C0C0C">
+  <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap">
+    <p style="font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(1.05rem,2.5vw,1.55rem);color:#F0EBE3;max-width:580px;line-height:1.7;font-weight:400">
+      "معماری هنر تبدیل فضا به احساس است — و احساس به خاطره."
+    </p>
+    <a href="projects.html" style="display:flex;align-items:center;gap:12px;color:#BFA26A;text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;flex-shrink:0;white-space:nowrap;transition:gap .3s" onmouseover="this.style.gap='18px'" onmouseout="this.style.gap='12px'">
+      مشاهده پروژه‌ها
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arr"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer style="padding:80px 48px 48px;max-width:1440px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:64px;border-bottom:1px solid #1E1E1E">
+    <div>
+      <p style="font-size:1.05rem;font-weight:700;letter-spacing:.08em;margin-bottom:16px">مدبران<span style="color:#BFA26A">.</span></p>
+      <p style="font-size:.82rem;color:#686868;line-height:1.9;max-width:240px">ساختن با نگاهی به فردا — شرکت مهندسی مدبران از ۱۳۸۵.</p>
+    </div>
+    <div>
+      <p style="font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:#BFA26A;margin-bottom:20px">صفحات</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <a href="index.html" class="f-link">خانه</a>
+        <a href="about.html" class="f-link">درباره ما</a>
+        <a href="projects.html" class="f-link">پروژه‌ها</a>
+        <a href="contact.html" class="f-link">تماس</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:#BFA26A;margin-bottom:20px">خدمات</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <a href="#" class="f-link">طراحی معماری</a>
+        <a href="#" class="f-link">ساخت و ساز</a>
+        <a href="#" class="f-link">طراحی داخلی</a>
+        <a href="#" class="f-link">بازسازی</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:#BFA26A;margin-bottom:20px">تماس</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="font-size:.78rem;color:#686868;line-height:1.8">تهران، پاسداران<br>گلستان پنجم، آرسس ۴۰۴</p>
+        <a href="tel:02121005667" class="f-link">۰۲۱۲۱۰۰۵۶۶۷</a>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:32px;flex-wrap:wrap;gap:16px">
+    <p style="font-size:.7rem;color:#3A3A3A">© ۱۴۰۳ مدبران. تمامی حقوق محفوظ است.</p>
+    <div style="display:flex;gap:6px;align-items:center">
+      <div style="width:4px;height:4px;background:#BFA26A;border-radius:50%"></div>
+      <p style="font-size:.63rem;color:#3A3A3A;letter-spacing:.1em">MODABERAN ENGINEERING CO.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ SUCCESS OVERLAY ═══════════ -->
+<div id="success">
+  <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:28px;padding:32px">
+    <div style="width:60px;height:60px;border:1px solid #BFA26A;border-radius:50%;display:flex;align-items:center;justify-content:center">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BFA26A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2 style="font-size:1.8rem;font-weight:200;letter-spacing:-.01em">درخواست ارسال شد</h2>
+    <p style="color:#686868;font-size:.88rem;max-width:340px;line-height:1.9">تیم مدبران درخواست شما را دریافت کرد. ظرف ۴۸ ساعت با شما تماس خواهیم گرفت.</p>
+    <button onclick="closeSuccess()" class="btn-g" style="margin-top:4px;padding:14px 36px">بازگشت به صفحه</button>
+  </div>
+</div>
+
+<script>
+  // Preloader
+  window.addEventListener('load',()=>{
+    document.getElementById('pll').style.width='100%';
+    setTimeout(()=>{
+      const pl=document.getElementById('pl');
+      pl.style.opacity='0';
+      setTimeout(()=>pl.style.display='none',600);
+    },800);
+  });
+
+  // Nav scroll solid
+  window.addEventListener('scroll',()=>{
+    document.getElementById('nav').classList.toggle('solid',window.scrollY>60);
+  });
+
+  // Mobile menu
+  function toggleMob(){
+    const m=document.getElementById('mob');
+    const b1=document.getElementById('b1'),b2=document.getElementById('b2'),b3=document.getElementById('b3');
+    const open=m.classList.toggle('open');
+    if(open){
+      b1.style.transform='rotate(45deg) translate(5px,5px)';
+      b2.style.opacity='0';
+      b3.style.transform='rotate(-45deg) translate(5px,-5px)';
+    } else {
+      b1.style.transform='';b2.style.opacity='';b3.style.transform='';
+    }
+  }
+
+  // Type button select
+  function selTyp(btn){
+    document.querySelectorAll('#typBtns button').forEach(b=>b.classList.remove('sel'));
+    btn.classList.add('sel');
+    document.getElementById('ftype').value=btn.textContent.trim();
+  }
+
+  // Scroll reveal
+  const ro=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}
+  }),{threshold:.1});
+  document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+
+  // Form submit
+  function handleSubmit(e){
+    e.preventDefault();
+    const btn=document.getElementById('sbtn');
+    const orig=btn.innerHTML;
+    btn.textContent='در حال ارسال…';
+    btn.disabled=true;
+    btn.style.opacity='.6';
+    setTimeout(()=>{
+      document.getElementById('success').classList.add('show');
+      e.target.reset();
+      // reset type buttons
+      document.querySelectorAll('#typBtns button').forEach((b,i)=>b.classList.toggle('sel',i===2));
+      document.getElementById('ftype').value='بازسازی';
+      btn.innerHTML=orig;
+      btn.disabled=false;
+      btn.style.opacity='';
+    },1600);
+  }
+
+  function closeSuccess(){
+    document.getElementById('success').classList.remove('show');
+  }
+</script>
+</body>
+</html>
